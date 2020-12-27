@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<gameResults>
+  <player id="1">
+    <name>Monster</name>
+    <score>250 </score>
+  </player>
+  <player id="2">
+    <name>Mila</name>
+    <score>150</score>
+  </player>
+  <player id="3">
+    <name>Test</name>
+    <score>50</score>
+  </player>
+  <player id="4">
+    <name>Vlad</name>
+    <score>10</score>
+  </player>
+</gameResults>
