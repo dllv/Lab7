@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ListTablets", "ListTablets\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XMLGameResults", "XMLGameResults\XMLGameResults.csproj", "{FFC7D4C7-701F-487B-BA33-7C7B8AF6B9D1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppConfig", "AppConfig\AppConfig.csproj", "{61941B6F-B483-4E28-BE31-2FCDF80FA60D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{FFC7D4C7-701F-487B-BA33-7C7B8AF6B9D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FFC7D4C7-701F-487B-BA33-7C7B8AF6B9D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FFC7D4C7-701F-487B-BA33-7C7B8AF6B9D1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{61941B6F-B483-4E28-BE31-2FCDF80FA60D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{61941B6F-B483-4E28-BE31-2FCDF80FA60D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{61941B6F-B483-4E28-BE31-2FCDF80FA60D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{61941B6F-B483-4E28-BE31-2FCDF80FA60D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
