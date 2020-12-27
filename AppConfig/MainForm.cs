@@ -33,6 +33,7 @@ namespace AppConfig
             formSettings.BorderStyle = this.FormBorderStyle;
             formSettings.Minimize = this.MinimizeBox;
             formSettings.Maximize = this.MaximizeBox;
+            formSettings.Font = this.Font;
             
             formSettings.Save();
         }
@@ -86,6 +87,15 @@ namespace AppConfig
             { 
                 BackColor = colorDialog1.Color;
                 lblBackColor.Text = colorDialog1.Color.Name;
+            }
+        }
+
+        private void btnFont_Click(object sender, EventArgs e)
+        {
+            if(fontDialog1.ShowDialog() == DialogResult.OK)
+            {
+                Font = fontDialog1.Font;
+                btnFont.Text = fontDialog1.Font.Name;
             }
         }
     }

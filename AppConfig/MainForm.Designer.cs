@@ -38,6 +38,8 @@
             this.lblBackColor = new System.Windows.Forms.Label();
             this.btnChangeColor = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
+            this.btnFont = new System.Windows.Forms.Button();
+            this.fontDialog1 = new System.Windows.Forms.FontDialog();
             this.SuspendLayout();
             // 
             // label1
@@ -118,6 +120,8 @@
             // 
             // btnChangeColor
             // 
+            this.btnChangeColor.DataBindings.Add(new System.Windows.Forms.Binding("Font", global::AppConfig.Properties.Settings.Default, "Font", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.btnChangeColor.Font = global::AppConfig.Properties.Settings.Default.Font;
             this.btnChangeColor.Location = new System.Drawing.Point(274, 121);
             this.btnChangeColor.Name = "btnChangeColor";
             this.btnChangeColor.Size = new System.Drawing.Size(75, 23);
@@ -136,12 +140,23 @@
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
+            // btnFont
+            // 
+            this.btnFont.Location = new System.Drawing.Point(15, 170);
+            this.btnFont.Name = "btnFont";
+            this.btnFont.Size = new System.Drawing.Size(75, 23);
+            this.btnFont.TabIndex = 9;
+            this.btnFont.Text = "Font";
+            this.btnFont.UseVisualStyleBackColor = true;
+            this.btnFont.Click += new System.EventHandler(this.btnFont_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = global::AppConfig.Properties.Settings.Default.BackColor;
             this.ClientSize = new System.Drawing.Size(387, 205);
+            this.Controls.Add(this.btnFont);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnChangeColor);
             this.Controls.Add(this.lblBackColor);
@@ -179,6 +194,8 @@
         private System.Windows.Forms.Label lblBackColor;
         private System.Windows.Forms.Button btnChangeColor;
         private System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.Button btnFont;
+        private System.Windows.Forms.FontDialog fontDialog1;
     }
 }
 
