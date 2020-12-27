@@ -40,7 +40,13 @@
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.tbFrom = new System.Windows.Forms.TextBox();
+            this.tbTo = new System.Windows.Forms.TextBox();
             this.groupBox.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // listOfPlayers
@@ -144,11 +150,59 @@
             // 
             this.columnHeader4.Text = "Время";
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.tbTo);
+            this.groupBox1.Controls.Add(this.tbFrom);
+            this.groupBox1.Controls.Add(this.label5);
+            this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Location = new System.Drawing.Point(12, 186);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(514, 36);
+            this.groupBox1.TabIndex = 3;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Вывод в диапазоне";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(152, 15);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(21, 13);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "от:";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(242, 15);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(22, 13);
+            this.label5.TabIndex = 1;
+            this.label5.Text = "до:";
+            // 
+            // tbFrom
+            // 
+            this.tbFrom.Location = new System.Drawing.Point(179, 11);
+            this.tbFrom.Name = "tbFrom";
+            this.tbFrom.Size = new System.Drawing.Size(57, 20);
+            this.tbFrom.TabIndex = 2;
+            this.tbFrom.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbFrom_KeyPress);
+            // 
+            // tbTo
+            // 
+            this.tbTo.Location = new System.Drawing.Point(270, 11);
+            this.tbTo.Name = "tbTo";
+            this.tbTo.Size = new System.Drawing.Size(57, 20);
+            this.tbTo.TabIndex = 3;
+            this.tbTo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbFrom_KeyPress);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(538, 192);
+            this.ClientSize = new System.Drawing.Size(538, 234);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.listOfPlayers);
@@ -157,6 +211,8 @@
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.groupBox.ResumeLayout(false);
             this.groupBox.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -176,6 +232,11 @@
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ColumnHeader columnHeader3;
         private System.Windows.Forms.ColumnHeader columnHeader4;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.TextBox tbTo;
+        private System.Windows.Forms.TextBox tbFrom;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
     }
 }
 

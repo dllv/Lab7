@@ -20,8 +20,4 @@
     <score>10</score>
     <time>3</time>
   </player>
-  <player id="5">
-    <name>123</name>
-    <score>123</score>
-  </player>
 </gameResults>

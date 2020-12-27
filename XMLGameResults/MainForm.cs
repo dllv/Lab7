@@ -102,12 +102,15 @@ namespace XMLGameResults
             XmlText idText = xmlDoc.CreateTextNode((xmlRoot.ChildNodes.Count+1).ToString());
             XmlText nameText = xmlDoc.CreateTextNode(txtName.Text); 
             XmlText scoreText = xmlDoc.CreateTextNode(txtScore.Text);
+            XmlText timeText = xmlDoc.CreateTextNode("10");
             idAttr.AppendChild(idText);
             nameElem.AppendChild(nameText);
             scoreElem.AppendChild(scoreText);
+            timeElem.AppendChild(timeText);
             playerElem.Attributes.Append(idAttr);
             playerElem.AppendChild(nameElem); 
             playerElem.AppendChild(scoreElem);
+            playerElem.AppendChild(timeElem);
             xmlRoot.AppendChild(playerElem);
             xmlDoc.Save(filename);
             string id = (xmlRoot.ChildNodes.Count + 1).ToString();
@@ -122,6 +125,14 @@ namespace XMLGameResults
             addToXml();
             txtName.Clear();
             txtScore.Clear();
+        }
+
+        private void tbFrom_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar < '0' || e.KeyChar > '9') && (e.KeyChar != 8)) e.Handled = true;
+            foreach(ListViewItem item in listOfPlayers.Items)
+            {
+            }
         }
     }
 }
