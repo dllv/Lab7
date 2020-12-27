@@ -22,6 +22,7 @@ namespace ListTablets
         public MainForm()
         {
             InitializeComponent();
+            Update_tslCount();
         }
 
         private void tsbAdd_Click(object sender, EventArgs e)
@@ -78,7 +79,8 @@ namespace ListTablets
             current = Tablets.Count-1;
             btnSave.Visible = false;
             btnCancel.Visible = false; 
-            MessageBox.Show("Запись добавлена"); 
+            MessageBox.Show("Запись добавлена");
+            Update_tslCount();
         }
 
         private void TabletToTextBoxes(int current)
@@ -102,6 +104,7 @@ namespace ListTablets
                 tbStorage.Clear(); 
                 tbCPU.Clear(); 
             }
+            Update_tslCount();
         }
         private void ScrollTablet(sbyte inc)
         {
@@ -155,7 +158,15 @@ namespace ListTablets
                 } 
                 SaveFile(); 
                 MessageBox.Show("Запись удалена");
-            }       
+            }
+        }
+
+        private void Update_tslCount()
+        {
+            if (Tablets.Count == 0)
+                tslCount.Text = "Нет записей";
+            else
+                tslCount.Text = current + 1 + " из " + Tablets.Count + " записей";
         }
     }
 }

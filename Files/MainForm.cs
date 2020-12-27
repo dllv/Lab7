@@ -40,6 +40,8 @@ namespace Files
                     tbInfo.Text += "Время создания файла: " + fiSource.CreationTime.ToString() + "\r\n";
                     tbInfo.Text += "Размер файла " + fiSource.Length + " байт \r\n";
                     tbInfo.Text += "Полный путь к файлу: " + fiSource.FullName.ToString() + "\r\n";
+                    tbInfo.Text += "Только для чтения: " + fiSource.IsReadOnly.ToString() + "\r\n";
+                    
 
                     if (Path.GetExtension(fileName) == ".txt")
                     {
@@ -55,6 +57,7 @@ namespace Files
                             tbEdit.Text += line + "\r\n";
                             line = srSource.ReadLine();
                         }
+                        tbEdit.ReadOnly = fiSource.IsReadOnly;
                         srSource.Close();
                     }
                     else
