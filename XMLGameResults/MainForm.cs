@@ -48,8 +48,9 @@ namespace XMLGameResults
             foreach ( XmlNode xmlNode in  xmlRoot)
             {
                 string id = "" ; 
-                string name = "" ; 
+                string name = "" ;
                 string score = "";
+                string time = "";
                 if  (xmlNode.Attributes.Count > 0)
                 {
                     XmlNode attr = xmlNode.Attributes.GetNamedItem("id");
@@ -65,16 +66,21 @@ namespace XMLGameResults
                     if  (childNode.Name == "score") 
                     { 
                         score = childNode.InnerText.ToString(); 
-                    } 
+                    }
+                    if (childNode.Name == "time")
+                    {
+                        time = childNode.InnerText.ToString();
+                    }
                 }
-                addPlayerToList(id, name, score);
+                addPlayerToList(id, name, score, time);
             } 
         }
-        private void addPlayerToList(string id, string name, string score)
+        private void addPlayerToList(string id, string name, string score, string time)
         {   
             ListViewItem lvi = new ListViewItem(id);
             lvi.SubItems.Add(name);
             lvi.SubItems.Add(score);
+            lvi.SubItems.Add(time);
             listOfPlayers.Items.Add(lvi); 
         }
 
@@ -92,6 +98,7 @@ namespace XMLGameResults
             XmlAttribute idAttr = xmlDoc.CreateAttribute("id");
             XmlElement nameElem = xmlDoc.CreateElement("name"); 
             XmlElement scoreElem = xmlDoc.CreateElement("score");
+            XmlElement timeElem = xmlDoc.CreateElement("time");
             XmlText idText = xmlDoc.CreateTextNode((xmlRoot.ChildNodes.Count+1).ToString());
             XmlText nameText = xmlDoc.CreateTextNode(txtName.Text); 
             XmlText scoreText = xmlDoc.CreateTextNode(txtScore.Text);
@@ -106,7 +113,8 @@ namespace XMLGameResults
             string id = (xmlRoot.ChildNodes.Count + 1).ToString();
             string name = txtName.Text; 
             string score = txtScore.Text;
-            addPlayerToList(id, name, score);
+            string time = "10";
+            addPlayerToList(id, name, score, time);
         }
 
         private void btnSave_Click(object sender, EventArgs e)

@@ -39,6 +39,7 @@
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.groupBox.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -47,11 +48,12 @@
             this.listOfPlayers.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1,
             this.columnHeader2,
-            this.columnHeader3});
+            this.columnHeader3,
+            this.columnHeader4});
             this.listOfPlayers.HideSelection = false;
             this.listOfPlayers.Location = new System.Drawing.Point(12, 30);
             this.listOfPlayers.Name = "listOfPlayers";
-            this.listOfPlayers.Size = new System.Drawing.Size(227, 149);
+            this.listOfPlayers.Size = new System.Drawing.Size(363, 149);
             this.listOfPlayers.TabIndex = 0;
             this.listOfPlayers.UseCompatibleStateImageBehavior = false;
             this.listOfPlayers.View = System.Windows.Forms.View.Details;
@@ -72,7 +74,7 @@
             this.groupBox.Controls.Add(this.txtScore);
             this.groupBox.Controls.Add(this.txtName);
             this.groupBox.Controls.Add(this.label2);
-            this.groupBox.Location = new System.Drawing.Point(245, 14);
+            this.groupBox.Location = new System.Drawing.Point(381, 15);
             this.groupBox.Name = "groupBox";
             this.groupBox.Size = new System.Drawing.Size(145, 165);
             this.groupBox.TabIndex = 2;
@@ -138,11 +140,15 @@
             this.columnHeader3.Text = "Количество очков";
             this.columnHeader3.Width = 103;
             // 
+            // columnHeader4
+            // 
+            this.columnHeader4.Text = "Время";
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(417, 192);
+            this.ClientSize = new System.Drawing.Size(538, 192);
             this.Controls.Add(this.groupBox);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.listOfPlayers);
@@ -169,6 +175,7 @@
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ColumnHeader columnHeader3;
+        private System.Windows.Forms.ColumnHeader columnHeader4;
     }
 }
 
